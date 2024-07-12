@@ -45,9 +45,11 @@ body {
 
 main {
   display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
   gap: 2.5rem;
   width: 80%;
-  max-width: 80rem;
+  margin: 10rem auto;
 }
 
 .card {
@@ -186,4 +188,27 @@ p {
 
 .blackish-blue p {
   color: var(--light-grayish-blue);
+}
+
+.daniel {
+  grid-column: 1/3;
+}
+
+.jonathan {
+  grid-column: 3;
+}
+
+.jeanette {
+  grid-column: 1;
+  grid-row: 2;
+}
+
+.patrick {
+  grid-column: 2/4;
+  grid-row: 2;
+}
+
+.kira {
+  grid-column: 4;
+  grid-row: 3/1;
 }
