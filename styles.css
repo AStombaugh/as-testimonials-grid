@@ -13,6 +13,7 @@
   --opacity-50: 50%;
   --opacity-70: 70%;
 
+  --font-weight-light: 400;
   --font-weight-medium: 500;
   --font-weight-heavy: 600;
 
@@ -44,6 +45,7 @@ body {
 
 main {
   display: grid;
+  grid-template-rows: repeat(2fr, auto);
   gap: 1.5rem 1.5rem;
   width: 95%;
   max-width: 90rem;
@@ -82,49 +84,43 @@ main {
   border: 2px solid var(--violet);
 }
 
-h2,
-h3,
-p {
-  font-weight: var(--font-weight-medium);
-}
-
 h2 {
   font-size: 1.125rem;
   grid-column: 2;
+  font-weight: var(--font-weight-medium);
 }
 
 h3 {
   font-size: 1rem;
   grid-column: 2;
   opacity: var(--opacity-50);
+  font-weight: var(--font-weight-light);
 }
 
 h4 {
+  font-size: 2rem;
   font-weight: var(--font-weight-heavy);
 }
 
 p {
+  color: var(--light-gray);
   opacity: var(--opacity-70);
+  font-weight: var(--font-weight-light);
 }
 
 .violet {
   background-color: var(--violet);
 }
 
-.violet h2 {
-  color: var(--light-grayish-blue);
-}
-
-.violet h3 {
+.violet,
+.grayish-blue,
+.blackish-blue h2,
+h3 {
   color: var(--light-grayish-blue);
 }
 
 .violet h4 {
   color: var(--light-grayish-blue);
-}
-
-.violet p {
-  color: var(--light-gray);
 }
 
 .grayish-blue {
