@@ -13,7 +13,6 @@
   --opacity-50: 50%;
   --opacity-70: 70%;
 
-  --font-weight-light: 400;
   --font-weight-medium: 500;
   --font-weight-heavy: 600;
 
@@ -46,9 +45,10 @@ body {
 main {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(2, 1fr);
+  grid-template-rows: repeat(2, auto);
   gap: 2.5rem;
-  width: 80%;
+  width: 90%;
+  max-width: 90rem;
   margin: 10rem auto;
 }
 
@@ -58,6 +58,7 @@ main {
   padding: 2.5rem;
   border-radius: 5px;
   box-shadow: 10px 10px 15px -5px rgba(207, 207, 207, 0.6);
+  justify-content: center;
 }
 
 .card section {
@@ -100,18 +101,22 @@ h3 {
 }
 
 h4 {
-  font-size: 2rem;
+  font-size: 1.625rem;
   font-weight: var(--font-weight-heavy);
-  margin: 0 0 1.5rem 0;
+  margin: 0 0 2rem 0;
 }
 
 p {
+  font-size: 1.25rem;
   opacity: var(--opacity-70);
-  font-weight: var(--font-weight-light);
 }
 
 .violet {
   background-color: var(--violet);
+  background-image: url("images/bg-pattern-quotation.svg");
+  background-repeat: no-repeat;
+  background-position: 80% 0%;
+  background-size: 22% auto;
 }
 
 .violet h2 {
@@ -211,4 +216,74 @@ p {
 .kira {
   grid-column: 4;
   grid-row: 3/1;
+}
+
+@media screen and (width <=64rem) {
+  main {
+    grid-template-columns: repeat(2, 2fr);
+    grid-template-rows: repeat(2, 2fr);
+  }
+
+  .daniel {
+    grid-column: unset;
+  }
+
+  .jonathan {
+    grid-column: unset;
+  }
+
+  .jeanette {
+    grid-column: unset;
+    grid-row: unset;
+  }
+
+  .patrick {
+    grid-column: unset;
+    grid-row: unset;
+  }
+
+  .kira {
+    grid-column: unset;
+    grid-row: unset;
+  }
+
+}
+
+@media screen and (width <=48rem) {
+  main {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+  }
+
+  .daniel {
+    grid-column: unset;
+  }
+
+  .jonathan {
+    grid-column: unset;
+  }
+
+  .jeanette {
+    grid-column: unset;
+    grid-row: unset;
+  }
+
+  .patrick {
+    grid-column: unset;
+    grid-row: unset;
+  }
+
+  .kira {
+    grid-column: unset;
+    grid-row: unset;
+  }
+
+  .violet {
+    background-color: var(--violet);
+    background-image: url("images/bg-pattern-quotation.svg");
+    background-repeat: no-repeat;
+    background-position: 90% 0%;
+    background-size: 35% auto;
+  }
+
 }
